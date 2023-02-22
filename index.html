@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pedido</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box-red">
+        <h1 class="titulo">❤️ Quer namorar comigo? ❤️</h1>
+        <div class="botoes">
+          <button class="btn">Sim</button>
+          <button class="btn" id="element">Não</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Obtenha uma referência ao elemento que deseja mover
+      const element = document.getElementById('element');
+
+      // Adicione um evento de "mouseover" a esse elemento
+      element.addEventListener('mouseover', () => {
+        // Obtenha as dimensões do container pai e do elemento filho
+        const containerWidth = element.parentNode.clientWidth;
+        const containerHeight = element.parentNode.clientHeight;
+        const elementWidth = element.clientWidth;
+        const elementHeight = element.clientHeight;
+
+        // Calcule uma posição aleatória dentro do container para o elemento filho
+        const randomX = Math.floor(
+          Math.random() * (containerWidth - elementWidth)
+        );
+        const randomY = Math.floor(
+          Math.random() * (containerHeight - elementHeight)
+        );
+
+        // Defina a nova posição do elemento filho como a posição aleatória calculada
+        element.style.left = `${randomX}px`;
+        element.style.top = `${randomY}px`;
+      });
+    </script>
+  </body>
+</html>
