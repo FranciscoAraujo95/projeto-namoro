@@ -9,12 +9,11 @@
 
 body {
     height: 100vh;
-    background: rgba(2, 2, 2, 0.35);
     color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     display: grid;
     place-content: center;
-    background-image: linear-gradient(to left top, #ff512f, #dd2476);
+    background: rgba(2, 2, 2, 0.35) linear-gradient(to left top, #ff512f, #dd2476);
 }
 
 .container {
